@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+html{
+    font-size: 20px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: auto;
+}
+nav ul li{
+    font-size: 22px;
+    padding: 3px;
+}
+nav h1{
+    font-size: 50px;
+    color: #76448A;
+}
+
+/* MAİN */
+main{
+    width: 100%;
+    height: auto;
+    background-color: #F5EEF8;
+}
+#hizala{
+    border: 1px solid #F5EEF8;
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+#ustKisim{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.merhaba{
+    width: 35%;
+    height: 400px;
+    background-image: url(Gorseller/merhaba.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+.hakkimda{
+    width: 65%;
+    height: auto;
+    float: left;
+    text-align: justify;
+    padding-top: 25px;
+    padding-right: 20px;
+}
+.hakkimda h2{
+    color: #76448A;
+}
+#altKisim{
+    width: 100%;
+    height: 250px;
+    float: left;
+}
+.kutu{
+    background-color: #EBDEF0;
+    width: 24%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    padding: 35px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+.kutu:hover{
+    background-color: black;
+}
+.gorsel1{
+    width: 100%;
+    height: 150px;
+    background-image: url(Gorseller/book.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+.gorsel1:hover{
+    background-image: url(Gorseller/kitap.jpg);
+}
+.gorsel2{
+    width: 100%;
+    height: 150px;
+    background-image: url(Gorseller/sewing_machine.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+.gorsel2:hover{
+    background-image: url(Gorseller/dikiş.jpg);
+}
+.gorsel3{
+    width: 100%;
+    height: 150px;
+    background-image: url(Gorseller/cooking_pot.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+.gorsel3:hover{
+    background-image: url(Gorseller/yemek.png);
+}
+.gorsel4{
+    width: 100%;
+    height: 150px;
+    background-image: url(Gorseller/walking.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+.gorsel4:hover{
+    background-image: url(Gorseller/yürüyüş.jpg);
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #76448A;
+}
+footer p{
+    font-size: 16px;
+    color: #F5EEF8;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* MEDİA */
+@media screen and (max-width:992px){
+    html{
+        font-size: 18px;
+    }
+    #altKisim{
+        height: 200px;
+    }
+    .gorsel1{
+        height: 110px;
+    }
+    .gorsel2{
+        height: 110px;
+    }
+    .gorsel3{
+        height: 110px;
+    }
+    .gorsel4{
+        height: 110px;
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 16px;
+    }
+    #altKisim{
+        height: 160px;
+    }
+    .kutu{
+        margin-left: 3px;
+    }
+    .gorsel1{
+        height: 70px;
+    }
+    .gorsel2{
+        height: 70px;
+    }
+    .gorsel3{
+        height: 70px;
+    }
+    .gorsel4{
+        height: 70px;
+    }
+}
