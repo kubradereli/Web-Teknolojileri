@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+html{
+    font-size: 20px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: auto;
+}
+nav ul li{
+    font-size: 22px;
+    padding: 3px;
+}
+nav h1{
+    font-size: 50px;
+    color: #196F3D;
+}
+
+/* MAİN */
+main{
+    width: 100%;
+    height: AUTO;
+    background-color: #E9F7EF ;
+}
+#hizala{
+    border: 1px solid #E9F7EF ;
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+#bilgi{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    text-align: justify;
+}
+#bilgi h1{
+    color: #196F3D ; 
+}
+#bilgi h2{
+    color: #196F3D ; 
+}
+.kutu{
+    background-color: #D4EFDF ;
+    border: 1px dashed black;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+h3{
+    color: #196F3D ;
+    text-align: center;
+}
+.harita{
+    margin: auto;
+    background-image: url(Gorseller/maps.png);
+    width: 92px;
+    height: 92px;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #196F3D ;
+}
+footer p{
+    font-size: 16px;
+    color: #E9F7EF ;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* MEDİA */
+@media screen and (max-width:992px){
+    html{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 16px;
+    }
+}
