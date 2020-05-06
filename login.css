@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+html{
+    font-size: 20px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: auto;
+}
+nav ul li{
+    font-size: 22px;
+    padding: 3px;
+}
+nav h1{
+    font-size: 50px;
+    color: #616A6B;
+}
+
+/* MAİN */
+main{
+    width: 100%;
+    height: 615px;
+    background-color: #F2F4F4;
+}
+#hizala{
+    border: 1px solid #F2F4F4;
+    width: 75%;
+    height:auto;
+    margin: auto;
+}
+.pencere{
+    width: 360px;
+    height: 440px;
+    margin: 25px auto;
+    background-color: #616A6B;
+    border-radius: 10px;
+}
+.logo{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.logo h2{
+    color: #F2F4F4;
+}
+.image{
+    background-image: url(Gorseller/login.png);
+    width: 72px;
+    height: 72px;
+    background-size: cover;
+    margin: auto;
+}
+.loginPencere{
+    width: 300px;
+    height: 225x;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+.loginPencere h6{
+    color: #F2F4F4; 
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #616A6B;
+}
+footer p{
+    font-size: 16px;
+    color: #F2F4F4;
+    text-align: center;
+    padding-top: 10px;
+}

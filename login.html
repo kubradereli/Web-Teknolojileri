@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımda</title>
-    <link rel="stylesheet" href="hakkimda.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -18,11 +18,12 @@
             <a class="navbar-brand" href="hakkimda.html"><h1>KÜBRA DERELİ</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>          
+            </button>
+          
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="hakkimda.html">Hakkımda<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
@@ -36,8 +37,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="iletisim.html">İletişim</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -46,44 +47,22 @@
     
     <main>
         <div id="hizala">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="Gorseller/merhaba.png" alt="Nature" style="width:100%">
+            <div class="pencere">
+                    <div class="logo">
+                        <div class="image"></div>
+                        <h2>Yönetici Girişi</h2>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <h2><b>ben Kübra,</b></h2>
-                    <p>
-                        20 yaşındayım ve Sakarya'nın Hendek ilçesinde doğup büyüdüm. Şu anda 
-                        <a href= "http://cs.sakarya.edu.tr/" target="_blank">Sakarya Üniversitesi'nde 
-                        Bilgisayar Mühendisliği</a> birinci sınıf öğrencisiyim. Bu bölüme olan ilgim ve merakım beni bu 
-                        mesleği seçmeye yönlendirdi. Kitap okumayı çok seviyorum, her kitap benim için yeni bir dünya 
-                        demek. Dikiş dikmek ise en büyük hobim. Bir şeyler üretebilmek, tasarlamak benim için bambaşka bir 
-                        duygu. Ayrıca yemek yapmayı ve yürüyüş yapmayı da çok severim. Geçtiğimiz sene bir sosyal sorumluluk 
-                        projesine katıldım. Köy okullarındaki çocuklara hediyeler götürüp onlarla bolca vakit geçirdik. 
-                        Çocukların yüzlerindeki o kocaman gülümsemeler her şeye değerdi. Bu projede yer almak hayatımda 
-                        yaşadığım en güzel deneyimdi.
-                    </p>
-                </div>
-            </div>
-
-            <div id="altKisim">
-                <div class="kutu">
-                    <div class= "gorsel1"></div>
-                </div>
-                <div class="kutu">
-                    <div class= "gorsel2"></div>
-                </div>
-                <div class="kutu">
-                    <div class= "gorsel3"></div>
-                </div>
-                <div class="kutu">
-                    <div class= "gorsel4"></div>
-                </div>
-            </div>
-            <h6>.</h6>           
-        </div>
+					<div class="loginPencere">
+						<form action="login.php" metod="POST">
+                            <h6>Kullanıcı Adı:</h6>
+                            <input type="text" name="kullaniciAdi" placeholder="______@sakarya.edu.tr" size="24px"><br><br>
+                            <h6>Şifre:</h6>
+                            <input type="password" name="sifre" placeholder="**********" size="24px"><br><br>
+                            <input type="submit" name="giris" value="Giriş Yap">
+                        </form>
+					</div>
+				</div>
+        </div>      
     </main>
 
     <footer>
