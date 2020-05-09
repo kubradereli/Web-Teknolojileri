@@ -10,6 +10,30 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+		function formkontrol()
+		{
+			if(document.getElementById("ad").value.length == 0)
+				document.getElementById("gonder").disabled = true;
+				
+			else if(document.getElementById("soyad").value.length == 0)
+				document.getElementById("gonder").disabled = true;
+		
+			else if(document.getElementById("email").value.length == 0)
+				document.getElementById("gonder").disabled = true;
+				
+			else if(document.getElementById("yorum").value.length == 0)
+				document.getElementById("gonder").disabled = true;
+	
+			else
+				document.getElementById("gonder").disabled = false;
+		}
+		function checkForm2(){
+		document.iletisimForm.reset();
+		}
+	</script>
+    
 </head>
 <body>
 
@@ -50,27 +74,27 @@
         <div id="hizala">
             <div class="iletisimPencere">
                 <div class="container">
-                    <form action="iletisim.php" metod="POST">
-                      
+                    <form name ="iletisimForm" id="form" action="iletisimBilgiler.php" method="POST">
+					  
                         <div class="form-group">
                             <label for="usr"><b>Ad:</b></label>
-                            <input type="text" class="form-control" id="usr" name="username">
+                            <input type="text" class="form-control" id="ad" name="username" onkeyup="formkontrol()">
                             <label for="usr"><b>Soyad:</b></label>
-                            <input type="text" class="form-control" id="usr" name="username">
-                            <label for="email"><b>E-mail:</b></label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            <input type="text" class="form-control" id="soyad" name="usersurname" onkeyup="formkontrol()">
+                            <label for="text"><b>E-mail:</b></label>
+                            <input type="text" class="form-control" id="email" name="email" onkeyup="formkontrol()">
                         </div>
                     
                         <div class="form-group">
                             <label for="usr"><b>Cinsiyet:</b></label><br>
                         <div class="form-check-inline">
                             <label class="form-check-label" for="radio1">
-                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Kadın
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Kadın" checked>Kadın
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label class="form-check-label" for="radio2">
-                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Erkek
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Erkek">Erkek
                             </label>
                         </div>
                         </div>
@@ -79,17 +103,17 @@
                             <label for="usr"><b>Site Hakkındaki Önerileriniz:</b></label>
                         <div class="form-check">
                             <label class="form-check-label" for="check1">
-                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">Tasarım geliştirilmeli.
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="Tasarım geliştirilmeli." checked>Tasarım geliştirilmeli.
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="check2">
-                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">İçerik zenginleştirilmeli.
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="İçerik zenginleştirilmeli.">İçerik zenginleştirilmeli.
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="check2">
-                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something">Yeni sayfalar eklenmeli.
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="Yeni sayfalar eklenmeli.">Yeni sayfalar eklenmeli.
                             </label>
                         </div>
                         </div>
@@ -106,12 +130,14 @@
                       
                         <div class="form-group">
                             <label for="comment"><b>Yorum:</b></label>
-                            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+							<textarea class="form-control" name ="yorum" id="yorum" rows="3" onkeyup="formkontrol()"></textarea>
                         </div>
-                      
+						
+						<p>*<i>Gönder butonunun aktif hale gelmesi için tüm alanları doldurunuz.</i></p>
+						
                         <div class="butonlar">
-                            <button type="submit" class="btn btn-info">Temizle</button>
-                            <button type="submit" class="btn btn-info">Gönder</button>
+                            <input type="button" id="submit" name="submit" value="Reset" class="btn btn-info" onclick="checkForm2();"/>
+                            <button type="submit" class="btn btn-info" id="gonder" disabled>Gönder</button>
                         </div>
                     </form>
                   </div>
